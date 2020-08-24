@@ -1,0 +1,10 @@
+<h2 *ngIf="movies" class="subtitulo">
+    {{ titulo }}
+</h2>
+<div class="container m-auto row justify-content-between">
+    <div class="col-3 mb-4" *ngFor="let movie of movies" (click)="verPelicula( movie.id )">
+        <div class="card bg-dark text-white">
+          <img [src]="movie.poster_path | noimage" class="card-img" [alt]="movie.title">
+        </div>
+    </div>
+</div>

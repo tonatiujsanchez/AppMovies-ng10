@@ -1,0 +1,17 @@
+.blue-bg{
+    background: linear-gradient(124.52deg, #E3FCFB 0.88%, #F4F0ED 97.53%);
+}
+.banner{
+    padding: 70px 0;
+    /* background: linear-gradient(124.52deg, #E3FCFB 0.88%, #F4F0ED 97.53%); */
+    font-family: 'Open Sans';
+}
+
+.banner .img-banner{
+    width: 70%;
+    margin-left: 30%;
+}
+.titulo-br{
+    font-size: 60px;
+    font-weight: 700;
+}

@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container pt-3 pb-3">
+    <a class="navbar-brand" href="#">
+      <img class="w-75" src="./assets/img/tmdb-logo.png" alt="The Movie DB">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="home" >Home</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="buscador">Buscador</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2"
+               type="search"
+               name="texto"
+               [(ngModel)]="texto"
+               placeholder="Buscar"
+               aria-label="Search">
+        <button class="btn btn-outline-info my-2 my-sm-0"
+                (click)="buscarPelicula()">
+          Buscar
+        </button>
+      </form>
+    </div>
+  </div>
+  </nav>

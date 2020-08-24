@@ -1,0 +1,35 @@
+<div class="jumbotron jumbotron-fluid banner blue-bg">
+    <div class="container">
+      <h2 class="display-4 titulo-buscar">Buscar en TheMovieDB</h2>
+      <input class="form-control"
+             type="text"
+             name="texto"
+             [(ngModel)]="texto"
+             (keyup.enter)="buscarPelicula()"
+             placeholder="Buscar pelicula">
+    </div>
+</div>
+
+  <!-- ==== loading ==== -->
+<div *ngIf="cargando == true" class=" row mt-5">
+  <div class="col mt-5 text-center">
+      <div class="lds-dual-ring"></div>
+  </div>
+</div>
+<!-- ==== loading ==== -->
+
+
+<section *ngIf="_movies.peliculasBuscadas.length > 0" class="pb-5">
+    <app-galeria [peliculas]="_movies.peliculasBuscadas" titulo="Resultado" pagina="buscador"></app-galeria>
+</section>
+
+
+<!-- ==== sin resultados ==== -->
+<div *ngIf="_movies.peliculasBuscadas.length === 0 && cargando == false" class="row mt-5">
+    <div class="col text-center mt-5">
+        <h4>No se encontraron resultados con:</h4>
+        <h3>{{ texto }}</h3>
+        <i class="fas fa-database fa-4x mt-2"></i>
+    </div>
+</div>
+<!-- ==== sin resultados ==== -->

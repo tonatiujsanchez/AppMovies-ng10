@@ -1,0 +1,44 @@
+<div id="carouselExampleControls" class="carousel slide banner blue-bg" data-ride="carousel">
+            <div class="carousel-inner container">
+                <div *ngFor="let item of carusel; let idx = index"
+                     class="carousel-item"
+                     [ngClass]="{'active': idx === 0 }" >
+
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-6 text-left img-desc">
+                            <h2 class="titulo-br">{{ item.desc }}</h2>
+                            <p>
+                                Tras los eventos de "Los Vengadores", 
+                                el agente Phil Coulson reune a un pequeño grupo de agentes para investigar 
+                                a un misterioso grupo conocido como Rising Tide. 
+                                En el proceso se cruza con Mike Peterson, un hombre aparentemente 
+                                ordinario que ha adquirido poderes sobrehumanos... 
+                                Episodio piloto de la serie "Agents of S.H.I.E.L.D.", escrito y dirigido por Joss Whedon.
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <img [src]="item.img" class="img-banner" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<section class="pb-5 blue-bg">
+    <app-galeria [peliculas]="recientes" titulo="En Cartelera" pagina="home"></app-galeria>
+</section>
+<section class="pb-5 blue-bg">
+    <app-galeria [peliculas]="populares" titulo="Más Populares" pagina="home"></app-galeria>
+</section>
+<section class="pb-5 blue-bg">
+    <app-galeria [peliculas]="kids" titulo="Para Niños" pagina="home"></app-galeria>
+</section>

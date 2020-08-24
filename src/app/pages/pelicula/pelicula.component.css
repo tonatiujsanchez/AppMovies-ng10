@@ -1,0 +1,26 @@
+.banner{
+    padding: 70px 0;
+    background: linear-gradient(124.52deg, #E3FCFB 0.88%, #ffffff 97.53%);
+    font-family: 'Open Sans';
+    /* background: url('/assets/img/br-03.jpg') no-repeat scroll center;
+    background-size: cover; */
+    /* color: #ffffff; */
+}
+
+.banner .img-banner{
+    width: 100%;
+}
+
+.titulo-pelicula{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.subtitulo{
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-family: 'Open Sans';
+    font-size: 35px;
+    font-weight: 700;
+}

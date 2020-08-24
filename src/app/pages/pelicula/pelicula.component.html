@@ -1,0 +1,42 @@
+
+<div class="jumbotron jumbotron-fluid banner">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-4 img-desc">
+                <img [src]="pelicula.poster_path | noimage" class="card-img" [alt]="pelicula.title">
+            </div>
+            <div class="col-8">
+                <h2 class="display-4 titulo-pelicula">{{ pelicula.title }} <small> - {{ pelicula.release_date }}</small></h2>
+                <p>
+                  {{ pelicula.overview }}
+                </p>
+                <p>
+                    <strong>Popularidad: </strong>
+                    <span class="badge badge-success">{{ pelicula.popularity }}</span>
+                </p>
+                <p> 
+                    <strong>Puntuación: </strong> 
+                    <span class="badge badge-primary">{{ pelicula.vote_average }}</span>
+                </p>
+                <button class="btn btn-outline-danger"
+                        (click)="regresar()">
+                    Regresar
+                </button>
+            </div>
+        </div>
+    </div>
+  </div>
+  <section>
+      <h3 class="subtitulo">Actores Principales</h3>
+      <div class="row container m-auto justify-content-between">
+          <div class="col-3" *ngFor="let actor of actores">
+            <div class="card">
+                <img [src]=" actor | noimagePerson " class="card-img-top" [alt]="actor.name">
+                <div class="card-body">
+                  <h5 class="card-title">{{ actor.name }}</h5>
+                  <p class="card-text">{{ actor.character }}</p>
+                </div>
+              </div>
+          </div>
+      </div>
+  </section>
